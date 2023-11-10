@@ -95,3 +95,60 @@
     }
   }
 }
+
+@media (max-width : 1300px) {
+  .cart-page-main {
+    padding: 80px 50px 40px 50px;
+  }
+}
+
+@media (max-width : 1150px) {
+  .cart-page-main {
+    padding: 80px 50px 40px 50px;
+    .content {
+      .finance,
+      .sales,
+      .marketing,
+      .it-list,
+      .ui-list,
+      .business,
+      .management {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}
+
+@media (max-width : 800px) {
+  .cart-page-main {
+    padding: 80px 50px 40px 50px;
+    .content {
+      .finance,
+      .sales,
+      .marketing,
+      .it-list,
+      .ui-list,
+      .business,
+      .management {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}
+
+@media (max-width : 600px) {
+  .cart-page-main {
+    padding: 80px 20px 40px 20px;
+    .content {
+      .finance,
+      .sales,
+      .marketing,
+      .it-list,
+      .ui-list,
+      .business,
+      .management {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}
