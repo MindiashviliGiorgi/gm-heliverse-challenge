@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter } from '@angular/core';
 import { DataService } from '../services/data.service';
 import { CartService } from '../services/cart.service';
 
@@ -45,5 +45,24 @@ export class HomePageComponent {
       this.cartService.addManagement(user);
     }
   }
+
+  searchDomain: string = '';
+  searchGender: string = '';
+  searchAvailability: string = '';
+
+  searchDomainChange : EventEmitter<string> = new EventEmitter<string>();
+  searchUserDomain() {
+    this.searchDomainChange.emit(this.searchDomain)
+  }
+
+  searchGenderChange : EventEmitter<string> = new EventEmitter<string>();
+  searchUserGender() {
+    this.searchGenderChange.emit(this.searchGender)
+  }
+
+  searchAvailabilityChange : EventEmitter<string> = new EventEmitter<string>();
+  searchUserAvailability() {
+    this.searchAvailabilityChange.emit(this.searchAvailability)
+  }  
 
 }
