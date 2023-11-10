@@ -1,0 +1,221 @@
+<app-header></app-header>
+<div class="cart-page-main">
+  <h1>Your Team List</h1>
+  <!-- finance -->
+  <div class="content" *ngIf="financeList.length > 0">
+    <h3>Finance</h3>
+    <div class="finance">
+      <ng-container *ngFor="let user of financeList">
+        <div class="container">
+          <div class="container-up">
+            <div class="prof-pic">
+              <img src="{{ user.avatar }}">
+            </div>
+            <div class="full-name">
+              <h3>{{ user.first_name + " " + user.last_name }}</h3>
+            </div>
+          </div>
+          <div class="container-down">
+            <p><b>Email:</b> {{ user.email }}</p>
+            <p><b>Gender:</b> {{ user.gender }}</p>
+            <p><b>Domain:</b> {{ user.domain }}</p>
+            <p>
+              <ng-container *ngIf="user.available">
+                <p style="color: green;">User is available</p>
+              </ng-container>
+              <ng-container *ngIf="!user.available">
+                <p style="color: darkred;">User is not available</p>
+              </ng-container>
+            </p>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  <!-- sales -->
+  <div class="content" *ngIf="salesList.length > 0">
+    <h3>Sales</h3>
+    <div class="sales">
+      <ng-container *ngFor="let user of salesList">
+        <div class="container">
+          <div class="container-up">
+            <div class="prof-pic">
+              <img src="{{ user.avatar }}">
+            </div>
+            <div class="full-name">
+              <h3>{{ user.first_name + " " + user.last_name }}</h3>
+            </div>
+          </div>
+          <div class="container-down">
+            <p><b>Email:</b> {{ user.email }}</p>
+            <p><b>Gender:</b> {{ user.gender }}</p>
+            <p><b>Domain:</b> {{ user.domain }}</p>
+            <p>
+              <ng-container *ngIf="user.available">
+                <p style="color: green;">User is available</p>
+              </ng-container>
+              <ng-container *ngIf="!user.available">
+                <p style="color: darkred;">User is not available</p>
+              </ng-container>
+            </p>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  <!-- marketing -->
+  <div class="content" *ngIf="marketingList.length > 0">
+    <h3>Marketing</h3>
+    <div class="marketing">
+      <ng-container *ngFor="let user of marketingList">
+        <div class="container">
+          <div class="container-up">
+            <div class="prof-pic">
+              <img src="{{ user.avatar }}">
+            </div>
+            <div class="full-name">
+              <h3>{{ user.first_name + " " + user.last_name }}</h3>
+            </div>
+          </div>
+          <div class="container-down">
+            <p><b>Email:</b> {{ user.email }}</p>
+            <p><b>Gender:</b> {{ user.gender }}</p>
+            <p><b>Domain:</b> {{ user.domain }}</p>
+            <p>
+              <ng-container *ngIf="user.available">
+                <p style="color: green;">User is available</p>
+              </ng-container>
+              <ng-container *ngIf="!user.available">
+                <p style="color: darkred;">User is not available</p>
+              </ng-container>
+            </p>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  <!-- IT -->
+  <div class="content" *ngIf="itList.length > 0">
+    <h3>IT</h3>
+    <div class="it-list">
+      <ng-container *ngFor="let user of itList">
+        <div class="container">
+          <div class="container-up">
+            <div class="prof-pic">
+              <img src="{{ user.avatar }}">
+            </div>
+            <div class="full-name">
+              <h3>{{ user.first_name + " " + user.last_name }}</h3>
+            </div>
+          </div>
+          <div class="container-down">
+            <p><b>Email:</b> {{ user.email }}</p>
+            <p><b>Gender:</b> {{ user.gender }}</p>
+            <p><b>Domain:</b> {{ user.domain }}</p>
+            <p>
+              <ng-container *ngIf="user.available">
+                <p style="color: green;">User is available</p>
+              </ng-container>
+              <ng-container *ngIf="!user.available">
+                <p style="color: darkred;">User is not available</p>
+              </ng-container>
+            </p>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  <!-- UI -->
+  <div class="content" *ngIf="uiList.length > 0">
+    <h3>UI Designing</h3>
+    <div class="ui-list">
+      <ng-container *ngFor="let user of uiList">
+        <div class="container">
+          <div class="container-up">
+            <div class="prof-pic">
+              <img src="{{ user.avatar }}">
+            </div>
+            <div class="full-name">
+              <h3>{{ user.first_name + " " + user.last_name }}</h3>
+            </div>
+          </div>
+          <div class="container-down">
+            <p><b>Email:</b> {{ user.email }}</p>
+            <p><b>Gender:</b> {{ user.gender }}</p>
+            <p><b>Domain:</b> {{ user.domain }}</p>
+            <p>
+              <ng-container *ngIf="user.available">
+                <p style="color: green;">User is available</p>
+              </ng-container>
+              <ng-container *ngIf="!user.available">
+                <p style="color: darkred;">User is not available</p>
+              </ng-container>
+            </p>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  <!-- business -->
+  <div class="content" *ngIf="businessList.length > 0">
+    <h3>Business Development</h3>
+    <div class="business">
+      <ng-container *ngFor="let user of businessList">
+        <div class="container">
+          <div class="container-up">
+            <div class="prof-pic">
+              <img src="{{ user.avatar }}">
+            </div>
+            <div class="full-name">
+              <h3>{{ user.first_name + " " + user.last_name }}</h3>
+            </div>
+          </div>
+          <div class="container-down">
+            <p><b>Email:</b> {{ user.email }}</p>
+            <p><b>Gender:</b> {{ user.gender }}</p>
+            <p><b>Domain:</b> {{ user.domain }}</p>
+            <p>
+              <ng-container *ngIf="user.available">
+                <p style="color: green;">User is available</p>
+              </ng-container>
+              <ng-container *ngIf="!user.available">
+                <p style="color: darkred;">User is not available</p>
+              </ng-container>
+            </p>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  <!-- Management -->
+  <div class="content" *ngIf="managementList.length > 0">
+    <h3>Management</h3>
+    <div class="management">
+      <ng-container *ngFor="let user of managementList">
+        <div class="container">
+          <div class="container-up">
+            <div class="prof-pic">
+              <img src="{{ user.avatar }}">
+            </div>
+            <div class="full-name">
+              <h3>{{ user.first_name + " " + user.last_name }}</h3>
+            </div>
+          </div>
+          <div class="container-down">
+            <p><b>Email:</b> {{ user.email }}</p>
+            <p><b>Gender:</b> {{ user.gender }}</p>
+            <p><b>Domain:</b> {{ user.domain }}</p>
+            <p>
+              <ng-container *ngIf="user.available">
+                <p style="color: green;">User is available</p>
+              </ng-container>
+              <ng-container *ngIf="!user.available">
+                <p style="color: darkred;">User is not available</p>
+              </ng-container>
+            </p>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

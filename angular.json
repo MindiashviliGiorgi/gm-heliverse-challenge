@@ -27,8 +27,7 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets",
-              "heliverse_mock_data.json"
+              "src/assets"
             ],
             "styles": [
               "src/styles.scss"

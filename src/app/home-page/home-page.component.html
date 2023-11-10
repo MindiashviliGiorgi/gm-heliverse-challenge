@@ -1,3 +1,37 @@
-<div *ngFor="let user of usersData">
-  <p>{{ user.id }}</p>
+<app-header></app-header>
+<div class="home-page-main">
+  <div class="search-system"></div>
+  <div class="section">
+    <ng-container *ngFor="let user of usersData | paginate: { itemsPerPage : itemsPerPage, currentPage : userName}">
+      <div class="container">
+        <div class="container-up">
+          <div class="prof-pic">
+            <img src="{{ user.avatar }}">
+          </div>
+          <div class="full-name">
+            <h3>{{ user.first_name + " " + user.last_name }}</h3>
+          </div>
+        </div>
+        <div class="container-down">
+          <p><b>Email:</b> {{ user.email }}</p>
+          <p><b>Gender:</b> {{ user.gender }}</p>
+          <p><b>Domain:</b> {{ user.domain }}</p>
+          <p>
+            <ng-container *ngIf="user.available">
+              <p style="color: green;">User is available</p>
+            </ng-container>
+            <ng-container *ngIf="!user.available">
+              <p style="color: darkred;">User is not available</p>
+            </ng-container>
+          </p>
+          <ng-container *ngIf="user.available">
+            <button (click)="addInTeam(user)">Add in team</button>
+          </ng-container>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  <div class="pagination-system">
+    <pagination-controls (pageChange)="userName = $event"></pagination-controls>
+</div>
 </div>
